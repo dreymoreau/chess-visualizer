@@ -1,3 +1,7 @@
+# Chess Visualizer
+
+This project takes my passion for chess and creates an interactive version to display stats. Wins/Losses, Percentage Increases/Decreases over time. This app uses the Chess.com API for data!! 
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
