@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ChessWebAPI, { PlayerProfileResponse } from "chess-web-api"
+import NavBar from './components/NavBar';
 
 function ChessPlayerProfile() {
   const [playerProfile, setPlayerProfile] = useState<PlayerProfileResponse | null>(null);
@@ -22,6 +23,7 @@ function ChessPlayerProfile() {
 
   return (
     <div>
+      <NavBar />
       <h2>Player Profile</h2>
       {error ? (
         <p>Error: {error.message}</p>
