@@ -3,8 +3,8 @@ export default function NavBar(){
         <div>
             <nav>
                 <ul>
-                    <li className="list-none">Login</li>
-                    <li className="list-none">About</li>
+                    <li className="list-none purple">Login</li>
+                    <li className="list-none purple">About</li>
                 </ul>
             </nav>
         </div>
