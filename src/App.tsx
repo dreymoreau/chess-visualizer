@@ -12,7 +12,7 @@ function ChessPlayerProfile() {
 
     //// this is me!!!!
     chessAPI
-      .getPlayer('skyspace8888')
+      .getPlayer('skyspace8')
       .then(
         (response) => {
           setPlayerProfile(response.body);
