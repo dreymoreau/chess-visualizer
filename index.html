@@ -7,11 +7,20 @@
     href="https://images.chesscomfiles.com/uploads/v1/user/301473855.c1f5bae4.200x200o.0adb001919c4.jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chess Visualizer</title>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@<version>/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@<version>/examples/jsm/"
+      }
+    }
+  </script>
 </head>
 
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
+
 </body>
 
 </html>
