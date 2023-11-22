@@ -1,13 +1,26 @@
-export default function NavBar(){
-    return(
-        <div>
-            <nav>
-                <ul>
-                    <li className="list-none purple">Login</li>
-                    <li className="list-none purple">About</li>
-                    <li className="list-none purple">How to login</li>
-                </ul>
-            </nav>
-        </div>
-    )
-}
+import {BrowserRouter as Router, Route, Link, RouteHandler} from 'react-router-dom';
+import { Login } from './Login';
+// Sample components for different routes
+
+const NavBar = () => {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            {/* Link components to navigate to different routes */}
+            <li>
+            <Route path="/login">
+                <Login />
+             </Route>
+            </li>
+          </ul>
+        </nav>
+
+        
+      </div>
+    </Router>
+  );
+};
+
+export default NavBar;
