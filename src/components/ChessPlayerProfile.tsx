@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import ChessWebAPI, { PlayerProfileResponse } from "chess-web-api"
 
@@ -6,7 +5,7 @@ interface PlayerProfile {
     // Define the structure of player profile
     username: string;
   }
-function ChessPlayerProfile() {
+export default function ChessPlayerProfile() {
     const [playerProfile, setPlayerProfile] = useState<PlayerProfileResponse | null>(null);
     const [error, setError] = useState<Error | null>(null);
   
@@ -38,5 +37,3 @@ function ChessPlayerProfile() {
     </div>
     )
 }
-
-export default ChessPlayerProfile;
