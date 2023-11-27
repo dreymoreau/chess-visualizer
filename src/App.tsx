@@ -1,11 +1,24 @@
-import NavBar from './components/NavBar';
-import ChessPlayerProfile from './components/ChessPlayerProfile';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-export default function App(){
+import NavBar  from "./pages/NavBar";
+import  HomePage  from "./pages/HomePage";
+import About from "./pages/About";
+
+
+export default function App() {
   return (
-    <div>
-      <NavBar />
-      <ChessPlayerProfile />
-    </div>
+    <>
+      <BrowserRouter>
+        <NavBar />
+        <Switch>
+          <Route path="/">
+            <HomePage />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </>
   );
 }
