@@ -1,16 +1,39 @@
 // import About from "./About";
-import { Link} from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-const NavBar = () => {
+// const NavBar = () => {
+//   return (
+//     <>
+//   <nav >
+//    <ul>
+//     <li><Link to="/about">{About}</Link></li>
+//    </ul>
+//   </nav>
+//   </>
+//   );
+// };
+
+// export default NavBar;
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+interface NavbarProps {
+  links: { path: string; component: React.ComponentType<any>; label: string }[];
+}
+
+const Navbar: React.FC<NavbarProps> = ({ links }) => {
   return (
-    <>
-  <nav >
-   <ul>
-    <li><Link to="/about">About</Link></li>
-   </ul>
-  </nav>
-  </>
+    <nav>
+      <ul>
+        {links.map((link, index) => (
+          <li key={index}>
+            <Link to={link.path}>{link.label}</Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 
-export default NavBar;
+export default Navbar;
