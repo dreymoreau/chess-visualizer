@@ -24,15 +24,17 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ links }) => {
   return (
-    <nav>
-      <ul>
+    <header>
+    <nav className="bg-[#34d399] flex flex-col justify-between px-4 py-6 shadow-xl">
+      <ul className="flex">
         {links.map((link, index) => (
-          <li key={index}>
+          <li key={index} className="mr-4">
             <Link to={link.path}>{link.label}</Link>
           </li>
         ))}
       </ul>
     </nav>
+    </header>
   );
 };
 

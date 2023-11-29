@@ -6,7 +6,7 @@ import About from './pages/About';
 
 const App: React.FC = () => {
   const navLinks = [
-    { path: '/', component: HomePage, label: 'HomePage' },
+    { path: '/', component: HomePage, label: 'Home' },
     { path: '/about', component: About, label: 'About' }
   ];
 

@@ -1,39 +1,53 @@
-import { useEffect, useState } from 'react';
-import ChessWebAPI, { PlayerProfileResponse } from "chess-web-api"
+import { useState, SetStateAction } from 'react';
+import ChessWebAPI, { PlayerProfileResponse } from 'chess-web-api';
 
 interface PlayerProfile {
-    // Define the structure of player profile
-    username: string;
-  }
+  // Define the structure of player profile
+  username: string;
+}
+
 export default function ChessPlayerProfile() {
-    const [playerProfile, setPlayerProfile] = useState<PlayerProfileResponse | null>(null);
-    const [error, setError] = useState<Error | null>(null);
+  // to output player profile info
+  const [playerProfile, setPlayerProfile] = useState<PlayerProfile | null>(null)
+  // error handling, for example of user does not exist
+  const [error, setError]: [Error | null, React.Dispatch<SetStateAction<Error | null>>] = useState(null)
+  // state to take in the username in the input field
+  const [inputUsername, setInputUsername] = useState<string>('')
+
+  const FetchPlayerProfile = async (username: string, setPlayerProfile: React.Dispatch<React.SetStateAction<PlayerProfileResponse | null>>, setError: React.Dispatch<React.SetStateAction<Error | null>>) => {
+    const chessAPI = new ChessWebAPI();
   
-    useEffect(() => {
-      const chessAPI = new ChessWebAPI();
-  
-      //// this is me!!!!
-      chessAPI
-        .getPlayer('skyspace8')
-        .then(
-          (response: {body: PlayerProfile}) => {
-            setPlayerProfile(response.body);
-          },
-          (err: Error) => {
-            setError(err);
-          }
-        );
-    }, []);
-    return (
-        <div>
-         <h2>Player Profile</h2>
-            {error ? (
+    try {
+      const response = await chessAPI.getPlayer(username);
+      setPlayerProfile(response.body);
+    } catch (err) {
+      setError(err);
+    }
+  };
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    FetchPlayerProfile(inputUsername,setPlayerProfile, setError);
+  };
+
+  return (
+    <div>
+      <h2>Player Profile</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={inputUsername}
+          onChange={(e) => setInputUsername(e.target.value)}
+          placeholder="Enter a username"
+        />
+        <button type="submit">Submit</button>
+      </form>
+      {error ? (
         <p>Error: {error.message}</p>
-         ) : playerProfile ? (
+      ) : playerProfile ? (
         <pre>{JSON.stringify(playerProfile, null, 2)}</pre>
-         ) : (
-        <p>Loading player profile...</p>
+      ) : (
+        <p>Enter a username to load player profile</p>
       )}
     </div>
-    )
+  );
 }
