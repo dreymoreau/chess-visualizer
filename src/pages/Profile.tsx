@@ -6,7 +6,7 @@ interface PlayerProfile {
   username: string;
 }
 
-export default function ChessPlayerProfile() {
+export default function Profile() {
   // to output player profile info
   const [playerProfile, setPlayerProfile] = useState<PlayerProfile | null>(null)
   // error handling, for example of user does not exist
@@ -26,7 +26,7 @@ export default function ChessPlayerProfile() {
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    FetchPlayerProfile(inputUsername,setPlayerProfile, setError);
+    FetchPlayerProfile(inputUsername, setPlayerProfile, setError);
   };
 
   return (
