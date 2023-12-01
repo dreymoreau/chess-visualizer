@@ -2,7 +2,7 @@
 export default function About(){
     return(
         <>
-            <h1>This is an App that focuses on creating visualizing data for your chess progress!</h1>
+            <h1>This is an App that creates visualizing data for your chess journey!</h1>
         </>
     )
 }
