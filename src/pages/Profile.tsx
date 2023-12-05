@@ -1,6 +1,5 @@
 import { useState, SetStateAction } from 'react';
 import ChessWebAPI, { PlayerProfileResponse } from 'chess-web-api';
-import DataVisualization from './DataVisualization';
 
 interface PlayerProfile {
   // Define the structure of player profile
@@ -41,15 +40,14 @@ export default function Profile() {
           placeholder="Enter a username"
         />
         <button type="submit">Submit</button>
-        <DataVisualization data={data}/>
       </form>
-      {/* {error ? (
+      {error ? (
         <p>Error: {error.message}</p>
       ) : playerProfile ? (
         <pre>{JSON.stringify(playerProfile, null, 2)}</pre>
       ) : (
         <p>Enter a username to load player profile</p>
-      )} */}
+      )}
     </div>
   );
 }
