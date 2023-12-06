@@ -6,7 +6,6 @@ const ChessStatsTest: React.FC<{ username: string }> = ({ username }) => {
 
   useEffect(() => {
     // Fetch data from Chess.com API and update 'stats'
-    // ...
 
     // For demonstration purposes, a sample structure similar to the expected stats is created here
     const sampleStats = {
