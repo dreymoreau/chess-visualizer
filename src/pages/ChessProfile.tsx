@@ -6,7 +6,7 @@ interface PlayerProfile {
   username: string;
 }
 
-export default function Profile() {
+export default function ChessProfile() {
   // to output player profile info
   const [playerProfile, setPlayerProfile] = useState<PlayerProfile | null>(null)
   // error handling, for example of user does not exist
