@@ -5,15 +5,14 @@ import HomePage from './pages/HomePage';
 import About from './pages/About';
 import ChessProfile from './pages/ChessProfile';
 import ChessStatsTest from './pages/ChessStatsTest';
-import Test from './pages/Test'
+// import Test from './pages/Test'
 
 const App: React.FC = () => {
   const navLinks = [
     { path: '/', component: HomePage, label: 'Home' },
     { path: '/about', component: About, label: 'About' },
-    { path: '/chessProfile', component: ChessProfile, label: 'Profile' },
-    { path: '/chessTest', component: ChessStatsTest, label: 'ChessStatsTest'},
-    { path: '/test', component: Test, label: 'Test'}
+    { path: '/profile', component: ChessProfile, label: 'Profile' },
+    { path: '/test', component: ChessStatsTest, label: 'ChessStatsTest'}
   ];
 
   return (
@@ -22,9 +21,8 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/chessProfile" element={<ChessProfile />} />
-          {/* <Route path="/test" element={<ChessStatsTest username={username}/>} /> */}
-        <Route path="/test" element={<Test />} />
+        <Route path="/profile" element={<ChessProfile />} />
+        <Route path="/test" element={<ChessStatsTest/>} />
       </Routes>
     </Router>
   );
