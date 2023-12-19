@@ -11,8 +11,13 @@ const App: React.FC = () => {
   const navLinks = [
     { path: '/', component: HomePage, label: 'Home' },
     { path: '/about', component: About, label: 'About' },
-    { path: '/profile', component: ChessProfile, label: 'Profile' },
-    { path: '/test', component: ChessStatsTest, label: 'ChessStatsTest'}
+<<<<<<<<< Temporary merge branch 1
+    { path: '/profile', component: Profile, label: 'Profile' },
+=========
+    { path: '/chessProfile', component: ChessProfile, label: 'Profile' },
+>>>>>>>>> Temporary merge branch 2
+    { path: '/chessTest', component: ChessStatsTest, label: 'ChessStatsTest'},
+    { path: '/test', component: Test, label: 'Test'}
   ];
 
   return (
@@ -23,6 +28,7 @@ const App: React.FC = () => {
         <Route path="/about" element={<About />} />
         <Route path="/profile" element={<ChessProfile />} />
         <Route path="/test" element={<ChessStatsTest/>} />
+        {/* <Route path="/test" element={<ChessStatsTest username={username}/>} /> */}
       </Routes>
     </Router>
   );
