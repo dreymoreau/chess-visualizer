@@ -5,17 +5,17 @@ import HomePage from './pages/HomePage';
 import About from './pages/About';
 import ChessProfile from './pages/ChessProfile';
 import ChessStatsTest from './pages/ChessStatsTest';
-// import Test from './pages/Test'
+import Test from './pages/Test'
 
 const App: React.FC = () => {
   const navLinks = [
     { path: '/', component: HomePage, label: 'Home' },
     { path: '/about', component: About, label: 'About' },
-<<<<<<<<< Temporary merge branch 1
-    { path: '/profile', component: Profile, label: 'Profile' },
-=========
+// <<<<<<<<< Temporary merge branch 1
+    // { path: '/profile', component: Profile, label: 'Profile' },
+// =========
     { path: '/chessProfile', component: ChessProfile, label: 'Profile' },
->>>>>>>>> Temporary merge branch 2
+// >>>>>>>>> Temporary merge branch 2
     { path: '/chessTest', component: ChessStatsTest, label: 'ChessStatsTest'},
     { path: '/test', component: Test, label: 'Test'}
   ];
