@@ -2,8 +2,6 @@
 
 This project takes my passion for chess and creates an interactive version to display stats. Wins/Losses, Percentage Increases/Decreases over time. This app uses the <a href="https://www.npmjs.com/package/chess-web-api">Chess.com API</a> to be able to use past game data!! 
 
-Using <a href="https://threejs.org/">Three.js</a>, this project creates more visualizations for the user to be able to see their chess statistics. 
-
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
