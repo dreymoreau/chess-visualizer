@@ -16,7 +16,7 @@ const App: React.FC = () => {
 // =========
     { path: '/chessProfile', component: ChessProfile, label: 'Profile' },
 // >>>>>>>>> Temporary merge branch 2
-    { path: '/chessTest', component: ChessStatsTest, label: 'ChessStatsTest'},
+    // { path: '/chessTest', component: ChessStatsTest, label: 'ChessStatsTest'},
     { path: '/test', component: Test, label: 'Test'}
   ];
 

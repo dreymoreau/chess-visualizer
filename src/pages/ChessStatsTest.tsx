@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ChessProfile from './ChessProfile';
 import * as d3 from 'd3';
 
 const ChessStatsTest: React.FC<{ username: string }> = ({ username }) => {
@@ -74,10 +75,13 @@ const ChessStatsTest: React.FC<{ username: string }> = ({ username }) => {
   }, [stats]);
 
   return (
+    <>
+    <ChessProfile />
     <div id="chartContainer">
       {/* SVG for D3 visualization */}
       <svg id="chartSvg" />
     </div>
+    </>
   );
 };
 
