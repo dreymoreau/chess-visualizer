@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ChessProfile from './ChessProfile';
+import ChessProfile from './Profile';
 import * as d3 from 'd3';
 
 const ChessStatsTest: React.FC<{ username: string }> = ({ username }) => {

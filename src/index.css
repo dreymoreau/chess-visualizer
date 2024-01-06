@@ -11,30 +11,34 @@ body {
 }
 
 
-/* #hamburger-menu {
-    width: 50px;
-    height: 50px;
-    display: block;
-    border: none;
-    padding: 0px;
-    margin: 20px;
-    background: linear-gradient(to bottom,
-            #3D0E61, #3D0E61 20%,
-            white 20%, white 40%,
-            #3D0E61 40%, #060506 60%,
-            white 20%, white 40%,
-            #3D0E61 80%, #3D0E61 100%);
+/* https://alvarotrigo.com/blog/hamburger-menu-css-responsive/ */
+@media (max-width: 768px) {
 
+    #hamburger-menu {
+        width: 50px;
+        height: 50px;
+        display: block;
+        border: none;
+        padding: 0px;
+        margin: 20px;
+        background: linear-gradient(to bottom,
+                #3D0E61, #3D0E61 20%,
+                #a9a9a9 20%, #a9a9a9 40%,
+                #3D0E61 40%, #3D0E61 60%,
+                #a9a9a9 60%, #a9a9a9 80%,
+                #3D0E61 80%, #3D0E61 100%);
+
+    }
+
+    #hamburger-menu #sidebar-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 200px;
+        height: 100%;
+        background-color: #3D0E61;
+        padding: 0px 10px;
+        box-sizing: border-box;
+    }
 }
-
-#hamburger-menu #sidebar-menu {
-    visibility: hidden;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 200px;
-    height: 100%;
-    background-color: #3D0E61;
-    padding: 0px 10px;
-    box-sizing: border-box;
-} */
