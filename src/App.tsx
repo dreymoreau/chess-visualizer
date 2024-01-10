@@ -4,6 +4,7 @@ import Navbar from './pages/NavBar';
 import HomePage from './pages/HomePage';
 import About from './pages/About';
 import Profile from './pages/Profile';
+// import TestNavbar from './pages/TestNavBar';
 
 const App: React.FC = () => {
   const navLinks = [
