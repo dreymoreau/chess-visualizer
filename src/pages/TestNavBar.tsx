@@ -33,11 +33,6 @@ const TestNavbar: React.FC<NavbarProps> = () => {
       {/* Check if window width is less than the breakpoint to render the hamburger menu */}
       {windowWidth < breakpoint ? (
         <div className="hamburger-menu">
-            {/* <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Profile</li>
-            </ul> */}
           <span>&#9776;</span>
         </div>
       ) : (
