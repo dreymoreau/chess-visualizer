@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../index.css';
 
 // Define types for props
@@ -6,7 +7,7 @@ interface NavbarProps {
     links: { path: string; component: React.ComponentType<any>; label: string }[];
   }
 
-const TestNavbar: React.FC<NavbarProps> = () => {
+const TestNavbar: React.FC<NavbarProps> = ({links}) => {
   // State to track screen width
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
@@ -29,7 +30,7 @@ const TestNavbar: React.FC<NavbarProps> = () => {
   const breakpoint = 768; // Change this to your desired breakpoint
 
   return (
-    <nav>
+    <nav className="bg-[#34d399] flex flex-col justify-between px-4 py-6 shadow-xl" >
       {/* Check if window width is less than the breakpoint to render the hamburger menu */}
       {windowWidth < breakpoint ? (
         <div className="hamburger-menu">
@@ -37,9 +38,15 @@ const TestNavbar: React.FC<NavbarProps> = () => {
         </div>
       ) : (
         /* Render other navbar elements */
-        <div className="other-navbar-elements">
-          {/* Other navbar content */}
-        </div>
+        <nav>
+        <ul className="flex" id="sidebar-menu">
+        {links.map((link, index) => (
+          <li key={index} className="mr-4">
+            <Link to={link.path}>{link.label}</Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
       )}
     </nav>
   );

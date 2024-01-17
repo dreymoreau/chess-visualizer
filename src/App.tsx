@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './pages/NavBar';
+// import Navbar from './pages/NavBar';
 import HomePage from './pages/HomePage';
 import About from './pages/About';
 import Profile from './pages/Profile';
-// import TestNavbar from './pages/TestNavBar';
+import TestNavbar from './pages/TestNavBar';
 
 const App: React.FC = () => {
   const navLinks = [
@@ -15,7 +15,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <Navbar links={navLinks} />
+      <TestNavbar links={navLinks} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
