@@ -30,7 +30,7 @@ const TestNavbar: React.FC<NavbarProps> = ({links}) => {
   const breakpoint = 768; // Change this to your desired breakpoint
 
   return (
-    <nav className="bg-[#34d399] flex flex-col justify-between px-4 py-6 shadow-xl" >
+    <nav className="bg-[#34d399] flex flex-col justify-between px-4 py-6 shadow-xl">
       {/* Check if window width is less than the breakpoint to render the hamburger menu */}
       {windowWidth < breakpoint ? (
         <div className="hamburger-menu">
