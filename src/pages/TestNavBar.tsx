@@ -33,8 +33,17 @@ const TestNavbar: React.FC<NavbarProps> = ({links}) => {
     <nav className="bg-[#34d399] flex flex-col justify-between px-4 py-6 shadow-xl">
       {/* Check if window width is less than the breakpoint to render the hamburger menu */}
       {windowWidth < breakpoint ? (
-        <div className="hamburger-menu">
-          <span>&#9776;</span>
+        <div>
+          <button id="hamburger-menu"></button>
+          <nav>
+            <ul className="flex" id="sidebar-menu">
+        {links.map((link, index) => (
+          <li key={index} className="mr-4">
+            <Link to={link.path}>{link.label}</Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
         </div>
       ) : (
         /* Render other navbar elements */
