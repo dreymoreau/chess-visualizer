@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 
 interface Props {
-    open: boolean
+  open: boolean
 }
+// for reference this code comes from this repo 
+//https://github.com/farukbigez/styled-components-hamburger/tree/master/src/components/burger
+
 
 export const StyledBurger = styled.button<Props>`
   width: 1.5rem;
