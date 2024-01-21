@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../index.css';
-import { StyledBurger } from './Burger.styled';
 
 // Define types for props
 interface NavbarProps {
@@ -38,7 +37,7 @@ const TestNavbar: React.FC<NavbarProps> = ({links}) => {
           <button id="hamburger-menu"></button>
           <nav>
             <ul className="flex" id="sidebar-menu">
-        {links.map((link, index) => (
+            {links.map((link, index) => (
           <li key={index} className="mr-4">
             <Link to={link.path}>{link.label}</Link>
           </li>
