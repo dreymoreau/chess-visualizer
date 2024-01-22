@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../index.css';
+import Burger from './Burger';
 
 // Define types for props
 interface NavbarProps {
@@ -10,6 +11,7 @@ interface NavbarProps {
 const TestNavbar: React.FC<NavbarProps> = ({links}) => {
   // State to track screen width
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
 
   // Update window width on resize
   const handleResize = () => {
@@ -36,13 +38,8 @@ const TestNavbar: React.FC<NavbarProps> = ({links}) => {
         <div>
           <button id="hamburger-menu"></button>
           <nav>
-            <ul className="flex" id="sidebar-menu">
-            {links.map((link, index) => (
-          <li key={index} className="mr-4">
-            <Link to={link.path}>{link.label}</Link>
-          </li>
-        ))}
-      </ul>
+            <Burger open={false} onClick={() => setIsOpen(!isOpen)}
+             links={[]}/>
     </nav>
         </div>
       ) : (
