@@ -41,4 +41,10 @@ body {
         padding: 0px 10px;
         box-sizing: border-box;
     }
+
+    .pop-up-menu {
+        display: block;
+        background: #eaff9f;
+        color: purple;
+    }
 }

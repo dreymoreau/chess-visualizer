@@ -12,6 +12,7 @@ const TestNavbar: React.FC<NavbarProps> = ({links}) => {
   // State to track screen width
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
+  const [isOpen, setIsOpen] = useState(false);
 
   // Update window width on resize
   const handleResize = () => {
@@ -36,12 +37,20 @@ const TestNavbar: React.FC<NavbarProps> = ({links}) => {
       {/* Check if window width is less than the breakpoint to render the hamburger menu */}
       {windowWidth < breakpoint ? (
         <div>
-          <button id="hamburger-menu"></button>
-          <nav>
-            <Burger open={false} onClick={() => setIsOpen(!isOpen)}
-             links={[]}/>
-    </nav>
-        </div>
+        <Burger open={isOpen} setOpen={setIsOpen} links={[]} />
+        {isOpen && (
+          <div className="pop-up-menu">
+            <nav>
+              <ul>
+                <li>Home</li>
+                <li>Profile</li>
+                <li>About</li>
+              </ul>
+              
+            </nav>
+          </div>
+        )}
+      </div>
       ) : (
         /* Render other navbar elements */
         <nav>
