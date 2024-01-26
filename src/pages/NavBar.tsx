@@ -29,25 +29,17 @@ useEffect(() => {
 }, []); // Empty dependency array means this effect runs only on mount and unmount
 
 // Define a breakpoint for when to show/hide the hamburger menu
-const breakpoint = 768; // Change this to your desired breakpoint
+const breakpoint = 500; // Change this to your desired breakpoint
 
 return (
   <nav className="bg-[#34d399] flex flex-col justify-between px-4 py-6 shadow-xl">
     {/* Check if window width is less than the breakpoint to render the hamburger menu */}
     {windowWidth < breakpoint ? (
-      <div>
-      {isOpen && (
-        <div>
+      <div className="hamburger-menu" id="sidebar-menu">
           <nav>
             <ul>
-              <li>Home</li>
-              <li>Profile</li>
-              <li>About</li>
             </ul>
-            
           </nav>
-        </div>
-      )}
     </div>
     ) : (
       /* Render other navbar elements */
