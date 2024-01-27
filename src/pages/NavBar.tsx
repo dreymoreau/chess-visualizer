@@ -29,7 +29,7 @@ useEffect(() => {
 }, []); // Empty dependency array means this effect runs only on mount and unmount
 
 // Define a breakpoint for when to show/hide the hamburger menu
-const breakpoint = 500; // Change this to your desired breakpoint
+const breakpoint = 475; // Change this to your desired breakpoint
 
 return (
   <nav className="bg-[#34d399] flex flex-col justify-between px-4 py-6 shadow-xl">
