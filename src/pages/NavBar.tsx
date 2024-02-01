@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../index.css';
 
-interface NavbarProps {
+interface NavBarProps {
   links: { path: string; component: React.ComponentType<any>; label: string }[];
 }
 
  
-const Navbar: React.FC<NavbarProps> = ({links}) => {
+const NavBar: React.FC<NavBarProps> = ({links}) => {
 // State to track screen width
 const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
@@ -29,7 +29,7 @@ useEffect(() => {
 }, []); // Empty dependency array means this effect runs only on mount and unmount
 
 // Define a breakpoint for when to show/hide the hamburger menu
-const breakpoint = 475; // Change this to your desired breakpoint
+const breakpoint = 555; // Change this to your desired breakpoint
 
 return (
   <nav className="bg-[#34d399] flex flex-col justify-between px-4 py-6 shadow-xl">
@@ -57,4 +57,4 @@ return (
     );
   };
 
-export default Navbar;
+export default NavBar;
