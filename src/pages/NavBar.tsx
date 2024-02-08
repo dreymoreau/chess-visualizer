@@ -6,7 +6,6 @@ interface NavBarProps {
   links: { path: string; component: React.ComponentType<any>; label: string }[];
 }
 
- 
 const NavBar: React.FC<NavBarProps> = ({links}) => {
 // State to track screen width
 const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);

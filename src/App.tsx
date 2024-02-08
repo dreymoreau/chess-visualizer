@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import About from './pages/About';
 import Profile from './pages/Profile';
-import Navbar from './pages/NavBar';
+import NavBar from './pages/NavBar';
 
 const App: React.FC = () => {
   const navLinks = [
@@ -14,7 +14,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <Navbar links={navLinks} />
+      <NavBar links={navLinks} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
